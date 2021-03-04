@@ -1,5 +1,4 @@
-# Object file
-*.o
+/node_modules
+/dist
 
-# Ada Library Information
-*.ali
+
