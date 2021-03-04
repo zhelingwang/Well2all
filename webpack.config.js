@@ -20,6 +20,10 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist')
   },
 
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx']
+  },
+
   module: {
     rules: [
       {
@@ -30,6 +34,13 @@ module.exports = {
           options: {
             presets: ['@babel/preset-react']
           }
+        }
+      },
+      {
+        test: /.tsx$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader'
         }
       }
     ]
