@@ -1,6 +1,7 @@
 # Well2all
-well too all is a UI lib by myself
+a practice project blog
 
 # tech
-- react hook
+- functional component & react hook
 - typescript
+- ant design
