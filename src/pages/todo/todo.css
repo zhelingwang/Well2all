@@ -1,0 +1,67 @@
+.container{
+  width: 650px;
+  margin: auto;
+  background-color: #f5f7f9;
+}
+.ant-card-body{
+  padding: 0 20px !important;
+}
+.title{
+  font-size: 64px !important;
+  font-weight: bold;
+}
+.input-todo{
+  padding: 12px 16px;
+}
+.p-16{
+  padding: 16px;
+}
+.p-10{
+  padding: 10px;
+}
+.m-r-10{
+  margin-right: 10px;
+}
+.fs-14{
+  font-size: 14px;
+}
+.fs-24{
+  font-size: 24px;
+}
+.align-l{
+  text-align: left;
+}
+.align-r{
+  text-align: right;
+}
+.list-item{
+  border-bottom: 1px solid #e8eaec;
+}
+.todo-text{
+  user-select: none;
+}
+.line-through{
+  text-decoration: line-through;
+  color: lightgray;
+}
+.icon{
+  font-size: 24px;
+  cursor: pointer;
+}
+.icon-delete-color{
+  color: rgba(192, 52, 29, 0.9);
+}
+.icon-finish-color{
+  color: rgb(66, 185, 131);
+}
+.cursor{
+  cursor: pointer;
+}
+.status-container{
+  display: flex;
+  justify-content: center;
+}
+.todo-status{
+  color: #2d8cf0;
+  user-select: none;
+}

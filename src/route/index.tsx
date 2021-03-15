@@ -1,35 +1,40 @@
 import MovieSearch from '../pages/home/index';
+import ReducerContext from '../pages/useReducer_useContext/index'
+import LoginPage from '../pages/redux_app/index';
+import Todo from '../pages/todo/index';
+
 export default [
   {
     path: '/',
-    name: 'Home',
-    component: MovieSearch
+    name: 'Search Movie',
+    component: Todo
   },
   {
-    path: '/category1',
-    name: 'category 1',
+    path: '/React_Redux',
+    name: 'React&Redux',
     subLink: [
       {
-        path: '/option1',
-        name: 'option1',
-        component: MovieSearch
+        path: '/useReducer_useContext',
+        name: 'useReducer&Context',
+        component: ReducerContext
+      },
+      {
+        path: '/redux',
+        name: 'redux',
+        component: LoginPage
       }
     ]
   },
   {
-    path: '/category2',
-    name: 'category 2',
+    path: '/Apps',
+    name: 'Apps',
     subLink: [
       {
-        path: '/option2',
-        name: 'option2'
+        path: '/TODO',
+        name: 'TODO',
+        component: Todo
       }
     ]
-  },
-  {
-    path: '/category3',
-    name: 'category 3',
-    subLink: []
   },
 ];
 

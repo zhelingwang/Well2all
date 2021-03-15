@@ -1,0 +1,4 @@
+- useReducer & useState hooks
+- indexedDB
+- serviceWork to capture requests and cache assets
+- web push to notify user some messages

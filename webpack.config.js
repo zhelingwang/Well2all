@@ -4,10 +4,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
 
-  entry: './src/index',
+  entry: {
+    index: './src/index',
+    "sw": path.resolve(__dirname, 'src/pages/todo/serviceWorker/sw.js')
+  },
 
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist/'),
   },
 

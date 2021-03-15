@@ -3,49 +3,16 @@ import Header from './components/Header'
 import Search from './components/Search'
 import Movie from './components/Movie'
 import './App.css';
-
+import { initialState, reducer } from './reducer';
 const { useState, useEffect, useReducer } = React;
 const apiKey = '1686ed2d';
-const MOVIE_API_URL = `https://www.omdbapi.com/?i=tt3896198&s=man&apikey=${apiKey}`;
-
-const initialState = {
-  loading: true,
-  movies: [],
-  errorMessage: null
-}
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "SEARCH_MOVIES_REQUEST":
-      return {
-        ...state,
-        loading: true,
-        errorMessage: null
-      };
-    case "SEARCH_MOVIES_SUCCESS":
-      return {
-        ...state,
-        loading: false,
-        movies: action.payload
-      };
-    case "SEARCH_MOVIES_FAILURE":
-      return {
-        ...state,
-        loading: false,
-        errorMessage: action.payload,
-        movies: []
-      };
-    default:
-      return state;
-  }
-}
+const MOVIE_API_URL = `https://www.omdbapi.com/?i=tt3896198&s=china&apikey=${apiKey}`;
 
 function MovieSearch() {
-
   // const [loading, setLoading] = useState(true);
   // const [movies, setMovies] = useState([]);
   // const [errorMessage, setErrorMessage] = useState(null);
-
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState); // must be used in body of functional component
 
   useEffect(() => {
     fetch(MOVIE_API_URL).then(res => res.json()).then(jsonRes => {
